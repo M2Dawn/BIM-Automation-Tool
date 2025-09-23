@@ -1,35 +1,33 @@
 # BIM Automation Tool
 
-**BIM Automation Tool** is a lightweight Revit add-in (C#) that automates:
-- Batch export of selected views to DWG.
-- Exporting Revit schedule tables to CSV for reporting/analysis.
+A lightweight Revit add-in (C#) that automates repetitive BIM tasks:
 
-## Features
-- Export multiple views (sheets, plans) to DWG with DWGExportOptions.
-- Extract schedule rows and create a CSV per schedule.
-- Simple UI (Revit ExternalCommand) — select views/schedules in the Revit UI and run.
+- Batch export of selected views/sheets to **DWG**.
+- Export of Revit schedule data to **CSV**.
 
-## Requirements
-- Revit 2020 / 2021 / 2022 / 2023 (adjust target framework & references)
-- Visual Studio 2019/2022
-- .NET Framework 4.8 (or the Revit target version)
-- Revit API assemblies (RevitAPI.dll, RevitAPIUI.dll) referenced from Revit install folder.
+### 🔹 Features
+- Saves hours during coordination and documentation stages.
+- Built with the Revit API (`RevitAPI.dll`, `RevitAPIUI.dll`).
+- Simple and extensible — easy to adapt to other tasks.
 
-## Installation
-1. Build the solution in Visual Studio (Release).
-2. Copy the generated `BimAutomationTool.dll` and any dependencies to:
-   `%APPDATA%\Autodesk\Revit\Addins\<RevitYear>\`
-3. Also place `BimAutomationTool.addin` into the same folder.
+### 📂 Project Structure
+- `src/CmdMain.cs` → Main ExternalCommand implementation.
+- `BimAutomationTool.addin` → Add-in manifest for Revit.
+- `README.md` → Documentation.
+- `LICENSE` → Open-source license (MIT by default).
 
-## Usage
-- Open Revit. Load a project/host model.
-- Open the views/schedules you want to export (or select them in Project Browser).
-- From Add-Ins → External Tools, run **BIM Automation Tool**.
-- Choose output folder for DWG and CSV exports in the dialog.
+### 🚀 How to Use
+1. Clone this repo.
+2. Open `src/` in **Visual Studio** (Class Library).
+3. Reference Revit API assemblies (`RevitAPI.dll`, `RevitAPIUI.dll`).
+4. Build the solution (target **.NET Framework 4.8** or your Revit version).
+5. Copy the built DLL + `BimAutomationTool.addin` into:
+6. Open Revit → Add-Ins → External Tools → **BIM Automation Tool**.
 
-## Notes
-- The tool uses Revit API `Document.Export()` for DWG export and `TableData`/`SchedulableField` for schedule reads.
-- If you require PDF export, integrate a DWG → PDF step or use Revit's PrintManager API.
+### 📸 Demo
+![Demo Placeholder](docs/demo.png)
 
-## License
-MIT — see LICENSE file.
+*(You can record a GIF later showing Revit exporting views and schedules, and put it here.)*
+
+### 📜 License
+MIT License © 2025 Hossam Sabry
