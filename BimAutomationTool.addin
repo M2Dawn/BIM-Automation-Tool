@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Name>BIM Automation Tool</Name>
+    <Assembly>%(AppData)\Autodesk\Revit\Addins\2022\BimAutomationTool.dll</Assembly>
+    <AddInId>8F3B9C2D-1234-4A6E-B8C4-EXAMPLE</AddInId>
+    <FullClassName>BimAutomationTool.CmdMain</FullClassName>
+    <VendorId>HS</VendorId>
+    <VendorDescription>Hossam Sabry</VendorDescription>
+  </AddIn>
+</RevitAddIns>
