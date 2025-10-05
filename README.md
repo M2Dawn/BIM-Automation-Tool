@@ -25,5 +25,3 @@ A lightweight Revit add-in (C#) that automates repetitive BIM tasks:
 6. Open Revit → Add-Ins → External Tools → **BIM Automation Tool**.
 
 
-###  License
-MIT License © 2025 Hossam Sabry
